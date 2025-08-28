@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDAG Admin Login</title>
+      <!--  Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles-new.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="/images/logo.jpg" alt="FDAG Logo" class="logo">
+                <span class="brand-text">FDAG</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-card animate-slide-up">
+                <div class="login-header">
+                    <h1>Admin Login</h1>
+                    <p>Access the FDAG administrative dashboard</p>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        Your credentials are incorrect.
+                    </div>
+                    
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <span class="btn-text">Sign In</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+  <!-- ✅ Your Firebase Config -->
+  <script src="firebase-config.js"></script>
+
+  <!-- ✅ Your Login JS (you must create this file to handle auth) -->
+  <script src="login.js"></script>
+
+</body>
+</html>

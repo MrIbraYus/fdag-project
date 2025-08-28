@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDAG Member Registration</title>
+      <!--  Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles-new.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="/images/logo.jpg" alt="FDAG Logo" class="logo">
+                <span class="brand-text">FDAG</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="register-main">
+        <div class="register-container">
+            <div class="register-header animate-fade-in">
+                <h1>Member Registration</h1>
+                <p>Join the Fashion Designers Association of Ghana</p>
+            </div>
+
+            <form id="registrationForm" class="registration-form animate-slide-up">
+                <!-- Section 1: Membership Information -->
+                <div class="form-section">
+                    <h2 class="section-title">1. Membership Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number *</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nationalId">National ID Number *</label>
+                            <input type="text" id="nationalId" name="nationalId" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="photo">Upload Passport-Size Photo *</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" required>
+                            <div class="file-preview" id="photoPreview"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regionalBranch">Region</label>
+                                <select id="regionalBranch" name="regionalBranch" required>
+                                <option value="">Select Region</option>
+                                <option value="Greater Accra" data-code="GAC">Greater Accra</option>
+                                <option value="Ashanti" data-code="ASH">Ashanti</option>
+                                <option value="Central" data-code="CEN">Central</option>
+                                <option value="Western" data-code="WES">Western</option>
+                                <option value="Eastern" data-code="EAS">Eastern</option>
+                                <option value="Volta" data-code="VOL">Volta</option>
+                                <option value="Northern" data-code="NOR">Northern</option>
+                                <option value="Upper East" data-code="UEA">Upper East</option>
+                                <option value="Upper West" data-code="UWA">Upper West</option>
+                                <option value="Bono" data-code="BON">Bono</option>
+                                <option value="Bono East" data-code="BOE">Bono East</option>
+                                <option value="Ahafo" data-code="AHF">Ahafo</option>
+                                <option value="Western North" data-code="WNW">Western North</option>
+                                <option value="Oti" data-code="OTI">Oti</option>
+                                <option value="Savannah" data-code="SAV">Savannah</option>
+                                <option value="North East" data-code="NEA">North East</option>
+                                </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fdagDistrict">District</label>
+                            <select id="fdagDistrict" name="fdagDistrict" required>
+                            <option value="">Select District</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="education">Level of Education *</label>
+                            <select id="education" name="education" required>
+                                <option value="">Select Education Level</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Senior">Senior</option>
+                                <option value="Tertiary">Tertiary</option>
+                                <option value="Vocational">Vocational</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emergencyContactName">Emergency Contact Name *</label>
+                            <input type="text" id="emergencyContactName" name="emergencyContactName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergencyContactNumber">Emergency Contact Number *</label>
+                            <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="homeAddress">Home Address *</label>
+                            <textarea id="homeAddress" name="homeAddress" rows="2" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gpsAddress">GPS Address</label>
+                        <input type="text" id="gpsAddress" name="gpsAddress">
+                    </div>
+                </div>
+
+                <!-- Section 2: Membership Type -->
+                <div class="form-section">
+                    <h2 class="section-title">2. Membership Type</h2>
+                    
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="membershipType" value="Full Membership" required>
+                            <span class="radio-custom"></span>
+                            <div class="radio-content">
+                                <strong>Full Membership</strong>
+                                <p>For professional designers with training skills</p>
+                            </div>
+                        </label>
+                        
+                        <label class="radio-label">
+                            <input type="radio" name="membershipType" value="Associate Membership" required>
+                            <span class="radio-custom"></span>
+                            <div class="radio-content">
+                                <strong>Associate Membership</strong>
+                                <p>For aspiring or student designers</p>
+                            </div>
+                        </label>
+                        
+                        <label class="radio-label">
+                            <input type="radio" name="membershipType" value="Corporate Membership" required>
+                            <span class="radio-custom"></span>
+                            <div class="radio-content">
+                                <strong>Corporate Membership</strong>
+                                <p>For businesses/institutions in the fashion space</p>
+                            </div>
+                        </label>
+                        
+                        <label class="radio-label">
+                            <input type="radio" name="membershipType" value="Others" required>
+                            <span class="radio-custom"></span>
+                            <div class="radio-content">
+                                <strong>Others</strong>
+                                <input type="text" id="otherMembershipType" name="otherMembershipType" placeholder="Please specify" class="other-input">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Section 3: Business/Professional Information -->
+                <div class="form-section">
+                    <h2 class="section-title">3. Business / Professional Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+                            <input type="text" id="businessName" name="businessName">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="businessLocation">Business Location</label>
+                            <input type="text" id="businessLocation" name="businessLocation">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="businessGps">Business GPS Address</label>
+                            <input type="text" id="businessGps" name="businessGps">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="businessRegNumber">Business Registration Number</label>
+                            <input type="text" id="businessRegNumber" name="businessRegNumber">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tinNumber">TIN Number</label>
+                            <input type="text" id="tinNumber" name="tinNumber">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="socialMedia">Social Media Handle</label>
+                            <input type="text" id="socialMedia" name="socialMedia">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <select id="position" name="position">
+                                <option value="">Select Position</option>
+                                <option value="Owner">Owner</option>
+                                <option value="Staff">Staff</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="yearsInBusiness">Number of Years in Business</label>
+                            <input type="number" id="yearsInBusiness" name="yearsInBusiness" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Trade Skills -->
+                <div class="form-section">
+                    <h2 class="section-title">4. Trade Skill Information</h2>
+                    <p class="section-subtitle">Select one or more skills</p>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Tailoring">
+                            <span class="checkbox-custom"></span>
+                            Tailoring
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Dressmaking">
+                            <span class="checkbox-custom"></span>
+                            Dressmaking
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Pattern Making">
+                            <span class="checkbox-custom"></span>
+                            Pattern Making
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Leather work">
+                            <span class="checkbox-custom"></span>
+                            Leather work
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Millinery And Accessories">
+                            <span class="checkbox-custom"></span>
+                            Millinery And Accessories
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Beauty Culture">
+                            <span class="checkbox-custom"></span>
+                            Beauty Culture
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tradeSkills" value="Others">
+                            <span class="checkbox-custom"></span>
+                            Others
+                            <input type="text" id="otherTradeSkills" name="otherTradeSkills" placeholder="Please specify" class="other-input">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Section 5: Declaration -->
+                <div class="form-section">
+                    <h2 class="section-title">5. Declaration Agreement</h2>
+                    
+                    <div class="declaration-box">
+                        <p>I hereby declare that all information provided in this application is true and accurate to the best of my knowledge. I understand that any false information may result in the rejection of my application or termination of membership.</p>
+                        
+                        <label class="checkbox-label declaration-checkbox">
+                            <input type="checkbox" id="declaration" name="declaration" required>
+                            <span class="checkbox-custom"></span>
+                            I agree to the terms and conditions and declare that the information provided is accurate.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Auto-generated fields (hidden) -->
+                <input type="hidden" id="membershipId" name="membershipId">
+                <input type="hidden" id="submissionDate" name="submissionDate">
+                <input type="hidden" id="submissionTime" name="submissionTime">
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Submit Registration</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Registration Successful!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for applying to be a family member of this Noble Fashion Designers Association of Ghana (FDAG). The National President welcomes you and sends their warmest greetings.</p>
+                <div class="membership-info">
+                    <p><strong>Your Membership ID:</strong> <span id="generatedMembershipId"></span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeSuccessModal()" class="modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Firebase App (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<!-- Firebase Realtime Database (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<!-- Firebase Auth (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+<!-- Firebase Configuration -->
+<script src="firebase-config.js"></script>
+
+<script src="register.js"></script>
+
+  <!-- ✅ Your Login JS (you must create this file to handle auth) -->
+  <script src="login.js"></script>
+</body>
+</html>
